@@ -47,11 +47,11 @@ class ads_buy
 
         if (in_array($entity['type'], ['bold', 'italic', 'code', 'underline', 'strikethrough', 'pre'])) {
             $format = [
-                'bold' => '*%s*',
-                'italic' => '_%s_',
+                'bold' => '**%s**',
+                'italic' => '__%s__',
                 'code' => '`%s`',
-                'underline' => '__%s__',
-                'strikethrough' => '~%s~',
+                'underline' => '~~%s~~',
+                'strikethrough' => '~~%s~~',
                 'pre' => '```%s```'
             ];
             return sprintf($format[$entity['type']], $text);
